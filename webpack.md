@@ -428,3 +428,6 @@ new webpack.HotModuleReplacementPlugin(),
 
 # 同时打开热加载和extract-text-webpack-plugin
 
+# 在webpack中加载图片
+npm i -D file-loader
+
