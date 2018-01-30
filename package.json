@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
-    "pro": "npm run clean && webpack -p --watch",
+    "pro": "npm run clean && set NODE_ENV=production && webpack -p --watch",
     "clean": "rimraf ./dist/*"
   },
   "author": "",

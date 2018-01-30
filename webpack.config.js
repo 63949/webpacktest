@@ -2,6 +2,17 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack = require("webpack");
+
+var isProd = process.env.NODE_ENV=='production';
+var cssDev = ['style-loader','css-loader','sass-loader'];
+var cssProd = ExtractTextPlugin.extract({
+    fallback:'style-loader',
+    loader:['css-loader','sass-loader'],
+    publicPath: '/dist'
+});
+
+var cssConfig = isProd ? cssProd : cssDev;
+
 module.exports = {
     // entry: './src/app.js',
     entry: {
@@ -22,11 +33,7 @@ module.exports = {
             // {test: /\.scss$/,use:['style-loader','css-loader','sass-loader']}, //指定文件后缀用css-loader
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    loader: ['css-loader', 'sass-loader'],
-                    publicPath: '/dist'
-                })
+                use: cssConfig
             } ,
             //指定文件后缀用css-loader
             //{test: /\.scss$/,loaders:'style-loader!css-loader'} //指定文件后缀用css-loader
@@ -70,7 +77,7 @@ module.exports = {
         }),
         new ExtractTextPlugin({
         	filename:'app.css',
-        	disable:false,
+        	disable:!isProd,
         	allChunks:true
         }),
         new webpack.HotModuleReplacementPlugin(),
