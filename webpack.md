@@ -431,3 +431,5 @@ new webpack.HotModuleReplacementPlugin(),
 # 在webpack中加载图片
 npm i -D file-loader
 
+在模板中添加图片
+

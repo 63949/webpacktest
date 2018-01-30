@@ -67,7 +67,7 @@ module.exports = {
             excludeChunks:['contact'],
             // filename: './../index.html',
             //template:'src/index.ejs' //ejs
-            template: 'src/index.pug' //html
+            template: 'src/index.html' //html
         }),
         new HtmlWebpackPlugin({
             title: '联系人模版2',
