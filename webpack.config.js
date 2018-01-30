@@ -48,7 +48,7 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/,
-                use: 'file-loader?name=[name].[ext]&outputPath=images/'
+                use: 'file-loader?name=[hash:12][name].[ext]&outputPath=images/'
             }
         ]
     },
