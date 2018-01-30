@@ -1,0 +1,36 @@
+{
+  "name": "webpacktest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "pro": "npm run clean && webpack -p --watch",
+    "clean": "rimraf ./dist/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "pug": "^2.0.0-rc.4",
+    "pug-html-loader": "^1.1.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-sources": "^1.1.0"
+  },
+  "dependencies": {}
+}
